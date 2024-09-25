@@ -1,24 +1,42 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import Header from "./components/Header";
+import About from "./components/About";
+import HowItWorks from "./components/HowItWorks";
+import Tokenomics from "./components/Tokenomics";
+import "./App.css"; // Main CSS file
+import Hero from "./components/Hero";
+import CryptoList from "./components/CryptoList";
+import Footer from "./components/Footer";
+import CreateContractPage from "./components/CreateContractPage"; // Import the new page
+import { WalletProvider } from "./context/WalletContext.jsx";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <WalletProvider>
+      <div id="top"></div>
+      <Router>
+        <div className="App">
+          <Header />
+          <Routes>
+            <Route
+              path="/"
+              element={
+                <>
+                  <Hero />
+                  <About />
+                  <HowItWorks />
+                  <CryptoList />
+                  <Tokenomics />
+                </>
+              }
+            />
+            <Route path="/create-contract" element={<CreateContractPage />} />
+          </Routes>
+          <Footer />
+        </div>
+      </Router>
+    </WalletProvider>
   );
 }
 

@@ -1,0 +1,243 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.create-contract-page {
+  background-color: #0e2137;
+  color: #fff;
+  min-height: 100%;
+  min-width: 100%;
+  background-image: url("../images/back.jpg");
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+}
+
+.close-contract-button {
+  top: 10px;
+  right: 10px;
+  padding: 10px;
+  background-color: rgb(255, 191, 0);
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.main-content {
+  display: grid;
+  grid-template-columns: 2fr 1fr; /* 2 columns: left for cards, right for text */
+  gap: 1rem; /* Adjust the gap between the left and right column */
+  width: 100%;
+  max-width: 1800px;
+  align-items: start;
+  margin-top: 50px;
+  background-image: url("../images/back.jpg"); /* Path to your background image */
+  background-size: auto;
+  background-position: center;
+  padding: 100px;
+}
+
+.blockchain-options {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Create a 2x2 grid */
+  gap: 3rem; /* Remove gap between grid items */
+}
+
+.blockchain-card {
+  display: grid; /* Use grid instead of flex */
+  place-items: center; /* Center content both horizontally and vertically */
+  padding: 0; /* Remove padding */
+  margin: 0; /* Remove margin */
+  border: none; /* Remove any borders */
+  overflow: hidden; /* Hide any overflow */
+  width: 100%; /* Ensure it fills the container */
+  height: 100%; /* Ensure it fills the container */
+  box-sizing: border-box;
+}
+
+.blockchain-card:hover {
+  transform: translateY(-10px);
+}
+
+.blockchain-icon {
+  width: 100%;
+  height: 100%;
+}
+
+.blockchain-icon img {
+  display: block;
+  width: 100%; /* Ensure the image fills the container */
+  height: 100%; /* Ensure the image fills the container */
+  object-fit: cover; /* Cover the container completely */
+}
+
+.blockchain-info {
+  padding-left: 3rem;
+}
+
+.blockchain-info h2 {
+  margin-top: 300px;
+  font-size: 4rem;
+  margin-bottom: 20px;
+}
+
+.blockchain-info h3 {
+  margin-bottom: 20px;
+  text-align: justify; /* This justifies the text lines */
+}
+
+.blockchain-info p {
+  text-align: justify; /* This justifies the text lines */
+}
+
+/* Inside CreateContractPage.css */
+/* Button Reset and Styling */
+.blockchain-button {
+  background: none;
+  border: none;
+  padding: 0; /* Remove default padding */
+  margin: 0; /* Remove default margin */
+  width: 100%; /* Make button fill the grid cell */
+  height: 100%; /* Make button fill the grid cell */
+  cursor: pointer; /* Change cursor to pointer */
+  outline: none; /* Remove default focus outline */
+  display: flex; /* Use flex to center the image */
+  justify-content: center;
+  align-items: center;
+}
+
+/* Image Styling */
+.blockchain-button img {
+  width: 100%; /* Ensure the image fills the button */
+  height: 100%; /* Ensure the image fills the button */
+  object-fit: cover; /* Maintain image aspect ratio */
+  display: block; /* Remove inline space around images */
+}
+
+.blockchain-button:hover,
+.blockchain-button:focus,
+.blockchain-button:active {
+  background: none !important; /* Remove any background */
+  box-shadow: none; /* Remove any box-shadow */
+  outline: none; /* Remove outline */
+}
+
+/* Additional Styling for Other Elements */
+.modal-card-container {
+  display: flex;
+  justify-content: center;
+}
+
+.modal-card {
+  transition: transform 0.3s ease;
+}
+
+.modal-card:hover {
+  transform: translateY(-10px);
+}
+
+.blockchain-button:focus,
+.blockchain-button:active {
+  outline: none;
+  background: none;
+}
+
+button:focus,
+button:active {
+  outline: none;
+  box-shadow: none;
+  background: none;
+}
+
+@media (max-width: 440px) {
+  .create-contract-page {
+    background-size: cover;
+    padding: 20px; /* Reduce padding for smaller screens */
+    min-height: 100vh; /* Ensure full height */
+  }
+
+  .close-contract-button {
+    position: absolute !important;
+    top: 20px !important;
+    right: 20px !important;
+    font-size: 1rem !important;
+    z-index: 1000 !important;
+  }
+
+  .main-content {
+    display: flex;
+    flex-direction: column; /* Stack content vertically */
+    padding: 20px; /* Reduce padding */
+    margin-top: 0px;
+    background-size: cover; /* Ensure background covers the entire section */
+    border-radius: 10px;
+  }
+
+  .blockchain-info {
+    order: -1; /* Move blockchain-info to the top */
+    padding-left: 0;
+    text-align: center; /* Center-align text for better readability */
+    margin-top: 20px; /* Add margin to separate from the cards */
+  }
+
+  .blockchain-info h2 {
+    font-size: 2.5rem; /* Reduce font size for headings */
+    margin-top: 20px; /* Less space from the top */
+  }
+
+  .blockchain-info h3 {
+    font-size: 1.2rem; /* Reduce font size */
+    margin-bottom: 10px; /* Smaller gap between elements */
+  }
+
+  .blockchain-info p {
+    font-size: 1rem; /* Smaller font size for paragraphs */
+  }
+
+  .blockchain-options {
+    grid-template-columns: 1fr; /* Single column layout */
+    gap: 20px; /* Smaller gap between cards */
+  }
+
+  .blockchain-card {
+    height: auto; /* Auto height for small screens */
+  }
+
+  .blockchain-icon img {
+    width: 80%; /* Reduce image size for smaller screens */
+    height: auto; /* Maintain aspect ratio */
+  }
+
+  .blockchain-button {
+    height: auto; /* Auto height for buttons */
+  }
+
+  .blockchain-button img {
+    width: 100%; /* Ensure image takes full button width */
+    height: auto; /* Maintain aspect ratio */
+  }
+
+  /* Modal card adjustments */
+  .modal-card-container {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+  }
+
+  .modal-card {
+    width: 100%; /* Full width for modal cards */
+    margin-bottom: 20px;
+  }
+
+  /* Ensure buttons remain responsive */
+  button {
+    font-size: 1rem; /* Adjust font size for buttons */
+  }
+}

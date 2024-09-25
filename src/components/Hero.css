@@ -1,0 +1,245 @@
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 60px 40px 10px 40px;
+  /* background: linear-gradient(180deg, #0c1b2e 0%, #112f45 100%); */
+  color: #fff;
+  margin-top: 400px; /* Adjust this value based on your fixed header height */
+  width: 80%; /* Same width as the header */
+  max-width: 1400px; /* Same max-width as the header */
+  margin: 0 auto; /* Center the hero section */
+}
+
+.hero-content {
+  max-width: 700px;
+}
+
+.hero h1 {
+  font-size: 9rem;
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+
+.hero p {
+  font-size: 1.5rem;
+  margin-bottom: 40px;
+  color: #ffffff;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  line-height: 2;
+}
+
+/* Gradient underline for strong tags */
+.gradient-underline {
+  position: relative; /* Required for positioning the ::after pseudo-element */
+  display: inline-block; /* Makes the underline fit the text */
+}
+
+.gradient-underline::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -2px; /* Adjusts the distance between the text and the underline */
+  height: 3px; /* Thickness of the underline */
+  background: linear-gradient(
+    to right,
+    rgba(0, 216, 255, 0),
+    #00d8ff,
+    #0066ff,
+    rgba(0, 102, 255, 0)
+  ); /* Gradient with transparent edges */
+  border-radius: 2px; /* Optional: rounded edges for the underline */
+}
+
+.hero button {
+  background: linear-gradient(90deg, #00d8ff, #0066ff);
+  padding: 15px 50px;
+  border-radius: 25px;
+  font-size: 1.2rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 15px rgba(0, 148, 255, 0.4);
+}
+
+.hero button:hover {
+  background: linear-gradient(160deg, #13bad8, #0157d7);
+}
+
+/* Animation Keyframes */
+@keyframes slideAndResize {
+  0% {
+    transform: translateX(50%) scale(1.2); /* Start off-screen to the right and scaled up */
+    opacity: 0; /* Optional: Start with the image being invisible */
+  }
+  100% {
+    transform: translateX(0) scale(1); /* End at its original position and size */
+    opacity: 1; /* Optional: Fade into view */
+  }
+}
+
+.hero-graphic img {
+  max-width: 80%; /* Allow the image to scale up to 80% of its container */
+  min-width: 350px; /* Prevent the image from getting smaller than 300px */
+  height: auto;
+  margin-top: 180px;
+  animation: slideAndResize 1.2s ease-in-out; /* Apply the animation */
+  object-fit: contain; /* Ensure the aspect ratio is maintained */
+}
+
+/* Hero.css */
+
+/* Style for modal overlay */
+.create-contract-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  transition:
+    opacity 0.3s ease,
+    visibility 0.3s ease; /* Smooth transition */
+}
+
+/* When modal is open */
+.create-contract-modal.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Style for the modal content (the CreateContractPage component) */
+.create-contract-modal .create-contract-page {
+  background: rgba(0, 0, 0, 0.7); /* Darken the background */
+  padding: 20px;
+  border-radius: 10px;
+  max-width: auto;
+  width: 100%;
+  height: 100%;
+  overflow-y: auto; /* Scroll if content overflows */
+  z-index: 1100;
+  position: relative;
+}
+
+/* Close button styles */
+.create-contract-modal .close-contract-button {
+  position: absolute;
+  top: 100px;
+  right: 300px;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: #fff;
+  cursor: pointer;
+}
+
+.create-contract-modal .close-contract-button:hover {
+  position: absolute;
+  top: 100px;
+  right: 300px;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: #fed419;
+  cursor: pointer;
+  text-decoration: underline;
+  text-underline-offset: 10px; /* Adjust the offset value to your liking */
+}
+
+@media (max-width: 1200px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding-top: 150px;
+    gap: 20px; /* Control the gap between content and image */
+  }
+
+  .hero-content {
+    padding-bottom: 0;
+    margin-bottom: 0; /* Remove any additional margin */
+  }
+
+  .hero-graphic {
+    margin-top: 100px; /* Remove top margin to reduce the gap */
+  }
+
+  .hero-graphic img {
+    max-width: 100%; /* Adjust the maximum width on smaller screens */
+    min-width: 350px; /* Adjust the minimum width on smaller screens */
+    margin-top: 0; /* Remove any default top margin */
+  }
+}
+
+@media (max-width: 440px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding-top: 100px;
+    gap: 10px;
+    margin-top: 0;
+    width: 100%;
+    padding: 30px;
+  }
+
+  .hero h1 {
+    font-size: 4.3rem; /* Adjust the font size for smaller screens */
+    margin-bottom: 20px;
+    margin-top: 60px;
+  }
+
+  .hero p {
+    font-size: 1rem; /* Adjust font size for description */
+    margin-bottom: 40px;
+    line-height: 2.5;
+    text-align: left;
+  }
+
+  .hero button {
+    padding: 10px 30px;
+    font-size: 1rem;
+    width: 100%;
+    max-width: 200px; /* Limit the button width */
+    margin-bottom: 0;
+  }
+
+  .hero-graphic img {
+    max-width: 90%; /* Make the image smaller */
+    margin-top: 0;
+    min-width: auto; /* Remove the minimum width restriction */
+    object-fit: contain;
+    margin-left: -50px; /* Move the image more to the left */
+  }
+
+  .gradient-underline::after {
+    bottom: 4px; /* Adjust underline position for smaller font sizes */
+    height: 2px; /* Thin underline for smaller screens */
+  }
+}
+
+/* Additional tweaks for iPhone SE-like devices */
+@media (max-width: 320px) {
+  .hero h1 {
+    font-size: 2rem; /* Further reduce font size for smaller screens */
+  }
+
+  .hero p {
+    font-size: 0.9rem; /* Further reduce the description font size */
+  }
+
+  .hero button {
+    font-size: 0.9rem;
+    padding: 8px 20px;
+  }
+
+  .hero-graphic img {
+    max-width: 100%;
+    margin-top: 10px;
+  }
+}

@@ -1,0 +1,54 @@
+.footer {
+  background-color: #0e2137;
+  color: #ffffff;
+  padding: 20px 0;
+  text-align: center;
+  margin-top: 50px;
+}
+
+.footer-content {
+  width: 80%;
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center; /* Center all the content */
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.footer p {
+  margin: 0;
+  text-align: center; /* Ensure the paragraph text is centered */
+  flex: 1; /* This will make it take up equal space along with other elements */
+}
+
+.footer-links {
+  display: flex;
+  gap: 20px;
+  text-align: center;
+  justify-content: center; /* Center the links horizontally */
+}
+
+.footer-links a {
+  color: #ffffff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #007ace;
+}
+
+@media (max-width: 800px) {
+  .footer-content {
+    flex-direction: column;
+    text-align: center;
+    justify-content: center; /* Ensure the content is centered vertically */
+  }
+
+  .footer-links {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
