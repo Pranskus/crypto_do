@@ -1,26 +1,26 @@
 {
   "files": {
-    "main.css": "/crypto-do/static/css/main.a7fa87a4.css",
-    "main.js": "/crypto-do/static/js/main.c92f5914.js",
-    "static/js/453.0083ffc0.chunk.js": "/crypto-do/static/js/453.0083ffc0.chunk.js",
-    "static/media/back.jpg": "/crypto-do/static/media/back.41903d607359f9924657.jpg",
-    "static/media/Toke.png": "/crypto-do/static/media/Toke.49ff578094646803b01d.png",
-    "static/media/Toke_phone.png": "/crypto-do/static/media/Toke_phone.48b2b78d1ef00807223b.png",
-    "static/media/Illustration.png": "/crypto-do/static/media/Illustration.d649b28db83dd3fe0153.png",
-    "static/media/erc_token.png": "/crypto-do/static/media/erc_token.b3ec0e4b60719162d7bc.png",
-    "static/media/erc_smart.png": "/crypto-do/static/media/erc_smart.23299e48627575061376.png",
-    "static/media/Binance.png": "/crypto-do/static/media/Binance.79ad52ece1a75fab79ba.png",
-    "static/media/Polygon.png": "/crypto-do/static/media/Polygon.726372d3a6ef1e6811cd.png",
-    "static/media/Tron.png": "/crypto-do/static/media/Tron.4718f974cebb9f8759e1.png",
-    "static/media/ETH.png": "/crypto-do/static/media/ETH.e7fb6a92e4193d5ae1ed.png",
-    "static/media/about.png": "/crypto-do/static/media/about.4aa338c27dda1d47b2be.png",
-    "index.html": "/crypto-do/index.html",
-    "main.a7fa87a4.css.map": "/crypto-do/static/css/main.a7fa87a4.css.map",
-    "main.c92f5914.js.map": "/crypto-do/static/js/main.c92f5914.js.map",
-    "453.0083ffc0.chunk.js.map": "/crypto-do/static/js/453.0083ffc0.chunk.js.map"
+    "main.css": "/crypto_do/static/css/main.1ec592bc.css",
+    "main.js": "/crypto_do/static/js/main.54b0fb45.js",
+    "static/js/453.0083ffc0.chunk.js": "/crypto_do/static/js/453.0083ffc0.chunk.js",
+    "static/media/back.jpg": "/crypto_do/static/media/back.41903d607359f9924657.jpg",
+    "static/media/Toke.png": "/crypto_do/static/media/Toke.49ff578094646803b01d.png",
+    "static/media/Toke_phone.png": "/crypto_do/static/media/Toke_phone.48b2b78d1ef00807223b.png",
+    "static/media/Illustration.png": "/crypto_do/static/media/Illustration.d649b28db83dd3fe0153.png",
+    "static/media/erc_token.png": "/crypto_do/static/media/erc_token.b3ec0e4b60719162d7bc.png",
+    "static/media/erc_smart.png": "/crypto_do/static/media/erc_smart.23299e48627575061376.png",
+    "static/media/Binance.png": "/crypto_do/static/media/Binance.79ad52ece1a75fab79ba.png",
+    "static/media/Polygon.png": "/crypto_do/static/media/Polygon.726372d3a6ef1e6811cd.png",
+    "static/media/Tron.png": "/crypto_do/static/media/Tron.4718f974cebb9f8759e1.png",
+    "static/media/ETH.png": "/crypto_do/static/media/ETH.e7fb6a92e4193d5ae1ed.png",
+    "static/media/about.png": "/crypto_do/static/media/about.4aa338c27dda1d47b2be.png",
+    "index.html": "/crypto_do/index.html",
+    "main.1ec592bc.css.map": "/crypto_do/static/css/main.1ec592bc.css.map",
+    "main.54b0fb45.js.map": "/crypto_do/static/js/main.54b0fb45.js.map",
+    "453.0083ffc0.chunk.js.map": "/crypto_do/static/js/453.0083ffc0.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.a7fa87a4.css",
-    "static/js/main.c92f5914.js"
+    "static/css/main.1ec592bc.css",
+    "static/js/main.54b0fb45.js"
   ]
 }
