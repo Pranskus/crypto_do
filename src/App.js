@@ -15,7 +15,7 @@ function App() {
   return (
     <WalletProvider>
       <div id="top"></div>
-      <Router>
+      <Router basename="/crypto_do">
         <div className="App">
           <Header />
           <Routes>
