@@ -25,10 +25,38 @@
   border-radius: 90px;
   max-width: 1200px;
   width: 90%;
+  max-height: 90vh; /* Maximum height of 90% of the viewport height */
+  overflow-y: auto; /* Add vertical scrolling if content exceeds max-height */
   text-align: center;
   position: relative;
   transform: scale(0.9); /* Start with a smaller scale */
   transition: transform 0.3s ease; /* Smooth transition for scaling */
+}
+
+/* Add some padding to the bottom to ensure last elements are visible when scrolling */
+.modal-content::after {
+  content: "";
+  display: block;
+  padding-bottom: 40px;
+}
+
+/* Adjust scrollbar appearance for better visibility */
+.modal-content::-webkit-scrollbar {
+  width: 10px;
+}
+
+.modal-content::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 5px;
+}
+
+.modal-content::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 5px;
+}
+
+.modal-content::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.5);
 }
 
 /* Show modal styles */
@@ -126,6 +154,7 @@
     border-radius: 20px;
     max-width: 100%;
     width: 100%;
+    max-height: 100vh; /* Allow full height on mobile */
     transform: scale(0.95); /* Slightly reduce the initial scale */
     margin-top: 60px;
     position: relative; /* Ensure the close button is positioned relative to the modal */

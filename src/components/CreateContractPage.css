@@ -5,6 +5,7 @@
 }
 
 .create-contract-page {
+  position: relative; /* This makes it a positioning context */
   background-color: #0e2137;
   color: #fff;
   min-height: 100%;
@@ -20,34 +21,49 @@
 }
 
 .close-contract-button {
-  top: 10px;
-  right: 10px;
-  padding: 10px;
+  position: absolute;
+  top: 20px;
+  right: 40px;
+  padding: 10px 20px;
   background-color: rgb(255, 191, 0);
   color: white;
   border: none;
   cursor: pointer;
   border-radius: 5px;
+  z-index: 1000;
+  font-size: 1rem;
+}
+
+.close-contract-button:hover {
+  background-color: rgb(230, 170, 0); /* Slightly darker on hover */
+}
+
+.content-wrapper {
+  position: relative;
+  width: 80%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 60px 40px 40px;
 }
 
 .main-content {
   display: grid;
-  grid-template-columns: 2fr 1fr; /* 2 columns: left for cards, right for text */
-  gap: 1rem; /* Adjust the gap between the left and right column */
+  grid-template-columns: 2fr 1fr;
+  gap: 2rem;
   width: 100%;
-  max-width: 1800px;
   align-items: start;
-  margin-top: 50px;
-  background-image: url("../images/back.jpg"); /* Path to your background image */
-  background-size: auto;
+  background-image: url("../images/back.jpg");
+  background-size: cover;
   background-position: center;
-  padding: 100px;
+  padding: 60px 40px 60px; /* Increased top and bottom padding */
+  border-radius: 20px; /* Added border radius for rounded corners */
+  overflow: hidden; /* Ensure content doesn't overflow rounded corners */
 }
 
 .blockchain-options {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* Create a 2x2 grid */
-  gap: 3rem; /* Remove gap between grid items */
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3rem;
 }
 
 .blockchain-card {
@@ -83,7 +99,7 @@
 }
 
 .blockchain-info h2 {
-  margin-top: 300px;
+  margin-top: 0; /* Remove top margin as we've added padding to the container */
   font-size: 4rem;
   margin-bottom: 20px;
 }
@@ -156,6 +172,59 @@ button:active {
   background: none;
 }
 
+/* Adjust the main breakpoint to trigger earlier */
+@media (max-width: 1424px) {
+  .content-wrapper {
+    width: 90%;
+    padding: 60px 20px 20px;
+  }
+
+  .main-content {
+    grid-template-columns: 1fr;
+    padding: 50px 30px 50px; /* Adjust padding for smaller screens */
+  }
+
+  .close-contract-button {
+    right: 20px;
+  }
+
+  .blockchain-options {
+    grid-template-columns: repeat(
+      2,
+      1fr
+    ); /* Keep 2x2 grid for medium screens */
+    gap: 2rem;
+  }
+
+  .blockchain-info {
+    order: -1; /* Move text content to the top */
+    text-align: center;
+    padding-left: 0;
+    margin-bottom: 2rem;
+  }
+
+  .blockchain-info h2 {
+    margin-top: 0; /* Remove top margin as we've added padding to the container */
+    font-size: 3rem;
+  }
+}
+
+/* Further adjustments for smaller screens */
+@media (max-width: 768px) {
+  .content-wrapper {
+    width: 95%;
+  }
+
+  .blockchain-options {
+    grid-template-columns: 1fr; /* Single column for smaller screens */
+  }
+
+  .blockchain-info h2 {
+    font-size: 2.5rem;
+  }
+}
+
+/* Mobile styles (keep your existing mobile styles, but adjust as needed) */
 @media (max-width: 440px) {
   .create-contract-page {
     background-size: cover;
@@ -163,21 +232,24 @@ button:active {
     min-height: 100vh; /* Ensure full height */
   }
 
-  .close-contract-button {
-    position: absolute !important;
-    top: 20px !important;
-    right: 20px !important;
-    font-size: 1rem !important;
-    z-index: 1000 !important;
+  .content-wrapper {
+    width: 100%;
+    padding: 50px 15px 15px;
   }
 
   .main-content {
     display: flex;
     flex-direction: column; /* Stack content vertically */
-    padding: 20px; /* Reduce padding */
+    padding: 0 15px 15px;
     margin-top: 0px;
     background-size: cover; /* Ensure background covers the entire section */
     border-radius: 10px;
+    width: 100%;
+  }
+
+  .close-contract-button {
+    right: 15px;
+    top: 15px;
   }
 
   .blockchain-info {
@@ -239,5 +311,59 @@ button:active {
   /* Ensure buttons remain responsive */
   button {
     font-size: 1rem; /* Adjust font size for buttons */
+  }
+}
+
+.close-button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  padding: 15px 20px 25px; /* Increased bottom padding */
+  background-color: transparent;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 48px; /* Increased font size further */
+  line-height: 1;
+  z-index: 1000;
+  transition: color 0.3s ease;
+  margin-bottom: 20px; /* Added margin to the bottom */
+}
+
+.close-button:hover {
+  color: rgb(255, 191, 0);
+}
+
+/* Adjust the content wrapper to accommodate the larger button */
+.content-wrapper {
+  position: relative;
+  width: 80%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 100px 40px 40px; /* Increased top padding */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .close-button {
+    font-size: 40px;
+    padding: 12px 16px 20px;
+  }
+
+  .content-wrapper {
+    padding-top: 80px;
+  }
+}
+
+@media (max-width: 440px) {
+  .close-button {
+    top: 15px;
+    right: 15px;
+    font-size: 36px;
+    padding: 10px 14px 18px;
+  }
+
+  .content-wrapper {
+    padding-top: 70px;
   }
 }

@@ -1,7 +1,8 @@
 .how-it-works {
-  padding: 80px 20px;
+  padding: 80px 40px; /* Adjusted padding to match Hero section */
   position: relative; /* For positioning elements inside the section */
-  max-width: 1400px;
+  width: 80%; /* Same width as the hero */
+  max-width: 1400px; /* Same max-width as the hero */
   margin: 0 auto;
 }
 
@@ -161,6 +162,11 @@
 }
 
 @media (max-width: 1200px) {
+  .how-it-works {
+    width: 100%; /* Full width on smaller screens */
+    padding: 80px 20px; /* Adjust padding for smaller screens */
+  }
+
   .steps {
     grid-template-columns: 1fr; /* Single column on small screens */
     gap: 20px;
@@ -197,7 +203,7 @@
 
   @media (max-width: 440px) {
     .how-it-works {
-      padding: 20px 10px; /* Reduce padding for small screens */
+      padding: 20px 10px; /* Keep the existing padding for mobile */
       max-width: 100%; /* Full width for phones */
     }
 

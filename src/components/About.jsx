@@ -1,16 +1,26 @@
-import React from "react";
+import React, { useState } from "react";
 import "./About.css"; // Ensure this file exists and is updated for styling
 import AboutImg from "../images/about.png";
+import CreateContractPage from "./CreateContractPage";
 
 const About = () => {
+  const [showCreateContract, setShowCreateContract] = useState(false);
+
+  const handleCreateContract = () => {
+    setShowCreateContract(true);
+  };
+
+  const handleCloseContract = () => {
+    setShowCreateContract(false);
+  };
+
   return (
     <section id="about" className="about">
       <div className="about-content">
         <div className="about-image">
-          {/* Replace the src with the path to your image */}
           <img src={AboutImg} alt="About Company" />
           <div className="about-button-container">
-            <button>Try for free</button>
+            <button onClick={handleCreateContract}>Try for free</button>
           </div>
         </div>
 
@@ -36,6 +46,13 @@ const About = () => {
           </div>
         </div>
       </div>
+
+      {/* Conditionally render CreateContractPage as a modal */}
+      {showCreateContract && (
+        <div className="create-contract-modal show">
+          <CreateContractPage onClose={handleCloseContract} />
+        </div>
+      )}
     </section>
   );
 };

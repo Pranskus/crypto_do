@@ -38,54 +38,56 @@ const CreateContractPage = ({ onClose }) => {
 
   return (
     <div className="create-contract-page">
-      <button className="close-contract-button" onClick={onClose}>
-        Back
-      </button>
-      <main className="main-content">
-        <div className="blockchain-options">
-          <div className="blockchain-card">
-            <div className="blockchain-icon">
-              <button onClick={handleOpenModal} className="blockchain-button">
-                <img src={Binance} alt="Binance" />
-              </button>
+      <div className="content-wrapper">
+        <button className="close-button" onClick={onClose}>
+          X
+        </button>
+        <main className="main-content">
+          <div className="blockchain-options">
+            <div className="blockchain-card">
+              <div className="blockchain-icon">
+                <button onClick={handleOpenModal} className="blockchain-button">
+                  <img src={Binance} alt="Binance" />
+                </button>
+              </div>
+            </div>
+            <div className="blockchain-card">
+              <div className="blockchain-icon">
+                <button onClick={handleOpenModal} className="blockchain-button">
+                  <img src={ETH} alt="Ethereum" />
+                </button>
+              </div>
+            </div>
+            <div className="blockchain-card">
+              <div className="blockchain-icon">
+                <button onClick={handleOpenModal} className="blockchain-button">
+                  <img src={Tron} alt="Tron" />
+                </button>
+              </div>
+            </div>
+            <div className="blockchain-card">
+              <div className="blockchain-icon">
+                <button onClick={handleOpenModal} className="blockchain-button">
+                  <img src={Polygon} alt="Polygon" />
+                </button>
+              </div>
             </div>
           </div>
-          <div className="blockchain-card">
-            <div className="blockchain-icon">
-              <button onClick={handleOpenModal} className="blockchain-button">
-                <img src={ETH} alt="Ethereum" />
-              </button>
-            </div>
-          </div>
-          <div className="blockchain-card">
-            <div className="blockchain-icon">
-              <button onClick={handleOpenModal} className="blockchain-button">
-                <img src={Tron} alt="Tron" />
-              </button>
-            </div>
-          </div>
-          <div className="blockchain-card">
-            <div className="blockchain-icon">
-              <button onClick={handleOpenModal} className="blockchain-button">
-                <img src={Polygon} alt="Polygon" />
-              </button>
-            </div>
-          </div>
-        </div>
 
-        <aside className="blockchain-info">
-          <h2>CHOOSE A BLOCKCHAIN</h2>
-          <h3>
-            <strong className="blue-text">CRYPTODO</strong> - is a smart
-            contract constructor for tokens.
-          </h3>
-          <p>
-            Everyday practice shows that constant outreach to our activities
-            plays an important role in shaping the learning system, ensuring our
-            activities play an important role in shaping.
-          </p>
-        </aside>
-      </main>
+          <aside className="blockchain-info">
+            <h2>CHOOSE A BLOCKCHAIN</h2>
+            <h3>
+              <strong className="blue-text">CRYPTODO</strong> - is a smart
+              contract constructor for tokens.
+            </h3>
+            <p>
+              Everyday practice shows that constant outreach to our activities
+              plays an important role in shaping the learning system, ensuring
+              our activities play an important role in shaping.
+            </p>
+          </aside>
+        </main>
+      </div>
       <Modal isOpen={isModalOpen} onClose={handleCloseModal} />
     </div>
   );

@@ -17,11 +17,8 @@ const Tokenomics = () => {
           </p>
           <p>
             It is accepted as a payment for the service, and also distributes
-            the company's profits among the leaders.
-          </p>
-          <p>
-            All tokens accepted as payment are burned and withdrawn from
-            circulation.
+            the company's profits among the leaders. All tokens accepted as
+            payment are burned and withdrawn from circulation.
           </p>
         </div>
         <div className="toke">
