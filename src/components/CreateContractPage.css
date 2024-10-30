@@ -212,6 +212,11 @@ button:active {
 
 /* Further adjustments for smaller screens */
 @media (max-width: 768px) {
+  .create-contract-page {
+    background-size: cover;
+    min-width: 90vh;
+    min-height: 100vh; /* Ensure full height */
+  }
   .content-wrapper {
     width: 90%;
     padding: 60px 0 10px;
