@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/crypto_do/static/css/main.edcb102d.css",
+    "main.css": "/crypto_do/static/css/main.2462e91c.css",
     "main.js": "/crypto_do/static/js/main.40869321.js",
     "static/js/453.0083ffc0.chunk.js": "/crypto_do/static/js/453.0083ffc0.chunk.js",
     "static/media/back.jpg": "/crypto_do/static/media/back.41903d607359f9924657.jpg",
@@ -15,12 +15,12 @@
     "static/media/ETH.png": "/crypto_do/static/media/ETH.e7fb6a92e4193d5ae1ed.png",
     "static/media/about.png": "/crypto_do/static/media/about.4aa338c27dda1d47b2be.png",
     "index.html": "/crypto_do/index.html",
-    "main.edcb102d.css.map": "/crypto_do/static/css/main.edcb102d.css.map",
+    "main.2462e91c.css.map": "/crypto_do/static/css/main.2462e91c.css.map",
     "main.40869321.js.map": "/crypto_do/static/js/main.40869321.js.map",
     "453.0083ffc0.chunk.js.map": "/crypto_do/static/js/453.0083ffc0.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.edcb102d.css",
+    "static/css/main.2462e91c.css",
     "static/js/main.40869321.js"
   ]
 }
