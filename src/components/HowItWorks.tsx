@@ -2,10 +2,15 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import "./HowItWorks.css"; // Link to the CSS file
 
-const HowItWorks = () => {
+interface Step {
+  title: string;
+  description: string;
+}
+
+const HowItWorks: React.FC = () => {
   const navigate = useNavigate(); // Initialize useNavigate
 
-  const steps = [
+  const steps: Step[] = [
     {
       title: "Create the Smart Contract",
       description:

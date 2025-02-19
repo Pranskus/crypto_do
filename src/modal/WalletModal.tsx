@@ -2,9 +2,19 @@ import React from "react";
 import { BrowserProvider } from "ethers"; // Import BrowserProvider for ethers.js v6
 import "./WalletModal.css"; // Assuming you have a CSS file for modal styling
 
-const WalletModal = ({ isOpen, onClose, onConnect }) => {
+interface WalletModalProps {
+  isOpen: boolean;
+  onClose: () => void;
+  onConnect: (address: string) => void;
+}
+
+const WalletModal: React.FC<WalletModalProps> = ({
+  isOpen,
+  onClose,
+  onConnect,
+}) => {
   // Handle wallet connection using MetaMask
-  const handleConnectWallet = async () => {
+  const handleConnectWallet = async (): Promise<void> => {
     if (window.ethereum) {
       try {
         // Create a provider and request the user's account

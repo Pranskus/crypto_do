@@ -3,7 +3,7 @@ import "./Tokenomics.css"; // Ensure this file exists and is updated for styling
 import Toke from "../images/Toke.png";
 import Toke_phone from "../images/Toke_phone.png";
 
-const Tokenomics = () => {
+const Tokenomics: React.FC = () => {
   return (
     <section id="tokenomics" className="tokenomics">
       <h2>TOKENOMICS</h2>

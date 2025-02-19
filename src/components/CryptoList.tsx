@@ -2,11 +2,12 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { Sparklines, SparklinesLine } from "react-sparklines";
 import "./CryptoList.css";
+import { CryptoData } from "../types/types";
 
-const CryptoList = () => {
-  const [cryptos, setCryptos] = useState([]);
-  const [loading, setLoading] = useState(true);
-  const [page, setPage] = useState(1); // State to keep track of the current page
+const CryptoList: React.FC = () => {
+  const [cryptos, setCryptos] = useState<CryptoData[]>([]);
+  const [loading, setLoading] = useState<boolean>(true);
+  const [page, setPage] = useState<number>(1); // State to keep track of the current page
   const perPage = 10; // Number of cryptocurrencies to display per page
 
   useEffect(() => {

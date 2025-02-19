@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import "./About.css"; // Ensure this file exists and is updated for styling
+import "./About.css";
 import AboutImg from "../images/about.png";
 import CreateContractPage from "./CreateContractPage";
 
-const About = () => {
+const About: React.FC = () => {
   const [showCreateContract, setShowCreateContract] = useState(false);
 
   const handleCreateContract = () => {
@@ -38,7 +38,7 @@ const About = () => {
             revolutionize financial operations, ensuring transparency, security,
             and efficiency.{" "}
           </p>
-          <div class="centered-bold-text">
+          <div className="centered-bold-text">
             <b>
               <strong className="blue-text">SMART CONTRACT</strong> - is
               decentralized blockchain application
@@ -47,7 +47,6 @@ const About = () => {
         </div>
       </div>
 
-      {/* Conditionally render CreateContractPage as a modal */}
       {showCreateContract && (
         <div className="create-contract-modal show">
           <CreateContractPage onClose={handleCloseContract} />

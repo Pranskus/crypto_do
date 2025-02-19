@@ -3,14 +3,14 @@ import "./Hero.css"; // Create a CSS file for the hero section styles
 import Illustration from "../images/Illustration.png";
 import CreateContractPage from "./CreateContractPage"; // Import the contract page
 
-const Hero = () => {
-  const [showCreateContract, setShowCreateContract] = useState(false);
+const Hero: React.FC = () => {
+  const [showCreateContract, setShowCreateContract] = useState<boolean>(false);
 
-  const handleCreateContract = () => {
+  const handleCreateContract = (): void => {
     setShowCreateContract(true); // Show the contract page as a modal
   };
 
-  const handleCloseContract = () => {
+  const handleCloseContract = (): void => {
     setShowCreateContract(false); // Hide the contract page
   };
 
