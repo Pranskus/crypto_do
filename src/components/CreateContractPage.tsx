@@ -28,6 +28,12 @@ const CreateContractPage: React.FC<CreateContractPageProps> = ({ onClose }) => {
     (document.activeElement as HTMLElement)?.blur?.();
   };
 
+  const handleOutsideClick = (event: React.MouseEvent<HTMLDivElement>) => {
+    if (event.target === event.currentTarget) {
+      onClose?.();
+    }
+  };
+
   useEffect(() => {
     const handleEscape = (event: KeyboardEvent) => {
       if (event.key === "Escape") {
@@ -44,8 +50,8 @@ const CreateContractPage: React.FC<CreateContractPageProps> = ({ onClose }) => {
   }, [onClose]);
 
   return (
-    <div className="create-contract-page">
-      <div className="content-wrapper">
+    <div className="create-contract-page" onClick={handleOutsideClick}>
+      <div className="content-wrapper" onClick={(e) => e.stopPropagation()}>
         <button className="close-button" onClick={onClose}>
           X
         </button>

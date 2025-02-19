@@ -23,14 +23,21 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose, children }) => {
 
   if (!isOpen) return null;
 
+  const handleOverlayClick = (e: React.MouseEvent<HTMLDivElement>) => {
+    // Only close if clicking the overlay itself, not its children
+    if (e.target === e.currentTarget) {
+      onClose();
+    }
+  };
+
   return (
-    <div className={`modal-overlay ${isOpen ? "show" : ""}`}>
-      <div
-        className={`modal-content ${isOpen ? "show" : ""}`}
-        onClick={(e) => e.stopPropagation()}
-      >
+    <div
+      className={`modal-overlay ${isOpen ? "show" : ""}`}
+      onClick={handleOverlayClick}
+    >
+      <div className={`modal-content ${isOpen ? "show" : ""}`}>
         <button className="modal-close" onClick={onClose}>
-          ×
+          X
         </button>
         {children}
       </div>
