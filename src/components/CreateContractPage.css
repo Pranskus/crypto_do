@@ -238,7 +238,7 @@ button:active {
   }
 
   .content-wrapper {
-    width: 100%;
+    width: 90%;
     padding: 50px 5px 5px;
   }
 
@@ -285,11 +285,22 @@ button:active {
 
   .blockchain-card {
     height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .blockchain-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
   }
 
   .blockchain-icon img {
     width: 80%;
     height: auto;
+    margin: 0 auto;
   }
 
   .blockchain-button {
@@ -301,10 +312,9 @@ button:active {
     height: auto;
   }
 
-  /* Modal card adjustments */
   .modal-card-container {
     flex-direction: column;
-    align-items: center;
+    align-items: right;
     padding: 10px;
   }
 
@@ -346,7 +356,6 @@ button:active {
   padding: 100px 40px 40px;
 }
 
-/* Responsive adjustments */
 @media (max-width: 768px) {
   .close-button {
     font-size: 40px;
@@ -371,7 +380,6 @@ button:active {
   }
 }
 
-/* Larger screens */
 @media (min-width: 769px) {
   .content-wrapper {
     width: 80%;

@@ -1,6 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import "./HowItWorks.css"; // Link to the CSS file
+import "./HowItWorks.css";
 
 interface Step {
   title: string;
@@ -8,7 +8,7 @@ interface Step {
 }
 
 const HowItWorks: React.FC = () => {
-  const navigate = useNavigate(); // Initialize useNavigate
+  const navigate = useNavigate();
 
   const steps: Step[] = [
     {
@@ -49,7 +49,6 @@ const HowItWorks: React.FC = () => {
         <h2>
           HOW IT <strong>WORKS</strong>
         </h2>
-        <button className="start-button">Start using</button>
       </div>
       <div className="steps">
         {steps.map((step, index) => (
@@ -62,9 +61,6 @@ const HowItWorks: React.FC = () => {
             <p>{step.description}</p>
           </div>
         ))}
-      </div>
-      <div className="parent-bottom">
-        <button className="bottom-button">Start using</button>
       </div>
     </section>
   );
