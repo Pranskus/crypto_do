@@ -1,5 +1,5 @@
 import React from "react";
-import "./Tokenomics.css"; // Ensure this file exists and is updated for styling
+import "./Tokenomics.css";
 import Toke from "../images/Toke.png";
 import Toke_phone from "../images/Toke_phone.png";
 

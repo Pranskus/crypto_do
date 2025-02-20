@@ -1,11 +1,9 @@
-/* General Reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Header styles */
 .header {
   position: fixed;
   top: 0;
@@ -21,7 +19,6 @@
   background: linear-gradient(360deg, rgba(25, 156, 179, 0), #000c12);
 }
 
-/* New inner wrapper to constrain content */
 .header-inner {
   display: flex;
   justify-content: space-between;
@@ -38,9 +35,8 @@
   color: #00d8ff;
 }
 
-/* Hamburger Menu Styles */
 .hamburger-menu {
-  display: none; /* Hidden by default */
+  display: none;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -65,14 +61,13 @@
 }
 
 .hamburger-menu .bar.open:nth-child(2) {
-  opacity: 0; /* Hide the middle bar */
+  opacity: 0;
 }
 
 .hamburger-menu .bar.open:nth-child(3) {
   transform: rotate(-45deg) translateY(-10px);
 }
 
-/* Navigation Menu Styles */
 .nav-menu {
   display: flex;
   align-items: center;
@@ -91,10 +86,9 @@
 }
 
 .nav-menu.active {
-  display: block; /* For mobile menu */
+  display: block;
 }
 
-/* Wallet container and button styles */
 .wallet-container {
   display: flex;
   align-items: center;
@@ -103,16 +97,15 @@
 .nav-menu ul li a {
   font-weight: 500;
   color: #fff;
-  text-decoration: none; /* Remove underline */
-  transition: color 0.3s ease; /* Smooth transition for hover */
+  text-decoration: none;
+  transition: color 0.3s ease;
 }
 
-/* Hover effect for navigation links */
 .nav-menu ul li a:hover {
-  background: linear-gradient(90deg, #00d8ff, #0066ff); /* Apply the gradient */
-  -webkit-background-clip: text; /* For Safari and Chrome */
-  -webkit-text-fill-color: transparent; /* For Safari and Chrome */
-  background-clip: text; /* Standard property */
+  background: linear-gradient(90deg, #00d8ff, #0066ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
   cursor: pointer;
 }
 
@@ -120,17 +113,12 @@
   cursor: pointer;
 }
 
-/* Button Styles */
 .wallet-button {
   width: 180px;
   padding: 10px 20px;
   border: none;
   border-radius: 20px;
-  background: linear-gradient(
-    90deg,
-    #00d8ff,
-    #0066ff
-  ) !important; /* Ensure background applies */
+  background: linear-gradient(90deg, #00d8ff, #0066ff) !important;
   color: #fff;
   font-weight: bold;
   cursor: pointer;
@@ -142,28 +130,20 @@
   text-overflow: ellipsis;
 }
 
-/* Styles for the "connected" state */
 .wallet-button.connected {
-  background: linear-gradient(
-    90deg,
-    #444,
-    #555
-  ) !important; /* Ensure connected background applies */
+  background: linear-gradient(90deg, #444, #555) !important;
   color: #00d8ff;
 }
 
-/* Hover effect for the default state */
 .wallet-button:hover {
   background: linear-gradient(140deg, #0066ff, #00d8ff) !important;
 }
 
-/* Hover effect for the "connected" state */
 .wallet-button.connected:hover {
   background: linear-gradient(140deg, #555, #666) !important;
   color: #00d8ff;
 }
 
-/* Mobile Menu Styles */
 @media (max-width: 1100px) {
   .nav-menu {
     position: fixed;
@@ -183,7 +163,7 @@
   }
 
   .nav-menu.active {
-    display: flex; /* Show menu when active */
+    display: flex;
   }
 
   .nav-menu ul {
@@ -195,32 +175,27 @@
     color: #00d8ff;
   }
 
-  /* Show the wallet button inside the mobile menu */
   .nav-menu .wallet-button {
     display: block;
     margin-top: 60px;
   }
 
-  /* Show the hamburger menu icon on mobile */
   .hamburger-menu {
     display: flex;
   }
 
-  /* Hide the wallet button in the header for mobile */
   .wallet-container {
     display: none;
   }
 }
 
-/* Show wallet container button on desktop */
 @media (min-width: 1101px) {
   .nav-menu .wallet-button {
-    display: none; /* Hide the wallet button inside nav-menu on desktop */
+    display: none;
   }
 }
 
 @media (max-width: 440px) {
-  /* Adjust the header for small screens */
   .header-inner {
     justify-content: space-between;
     width: 100%;
@@ -228,7 +203,7 @@
   }
 
   .logo img {
-    max-width: 150px; /* Slightly reduce the logo size */
+    max-width: 150px;
     padding-top: 10px;
   }
 
@@ -237,11 +212,11 @@
     position: absolute;
     top: 30x;
     right: 30px;
-    z-index: 2000; /* Keep it above other elements */
+    z-index: 2000;
   }
 
   .nav-menu {
-    width: 100%; /* Full width for mobile */
+    width: 100%;
     height: 100%;
     top: 0;
     right: 0;
@@ -255,7 +230,7 @@
   }
 
   .nav-menu ul {
-    gap: 40px; /* Reduce gap between menu items */
-    margin-top: 10px; /* Space out the menu items */
+    gap: 40px;
+    margin-top: 10px;
   }
 }

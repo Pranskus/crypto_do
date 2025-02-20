@@ -1,7 +1,7 @@
 .tokenomics {
-  padding: 80px 40px; /* Adjusted padding to match Hero section */
-  width: 80%; /* Same width as the hero */
-  max-width: 1400px; /* Same max-width as the hero */
+  padding: 80px 40px;
+  width: 80%;
+  max-width: 1400px;
   margin: 0 auto;
 }
 
@@ -16,12 +16,12 @@
   align-items: center;
   padding: 0;
   border-radius: 10px;
-  gap: 20px; /* Space between text and image */
+  gap: 20px;
 }
 
 .text-content {
-  flex: 2; /* Smaller flex value for the text part */
-  max-width: 40%; /* Limit the maximum width for the text content */
+  flex: 2;
+  max-width: 40%;
 }
 
 .text-content h3 {
@@ -34,28 +34,27 @@
   font-size: 1.2rem;
   color: #ffffff;
   padding: 20px 80px 20px 0;
-  text-align: justify; /* This justifies the text lines */
+  text-align: justify;
 }
 
 .toke {
-  flex: 3; /* Larger flex value to take more space */
-  width: 100%; /* Make the image take up all available space in its container */
-  max-width: 90%; /* Adjust this value to control the maximum width of the image */
+  flex: 3;
+  width: 100%;
+  max-width: 90%;
   height: auto;
 }
 
-/* Initially hide the phone image */
 .phone {
-  display: none; /* Keep the phone image hidden by default */
-  margin: 0 auto; /* Center the image on smaller screens */
-  padding: 0; /* Remove any padding */
-  text-align: center; /* Center the image inside the container */
+  display: none;
+  margin: 0 auto;
+  padding: 0;
+  text-align: center;
 }
 
 @media (max-width: 1200px) {
   .tokenomics {
-    width: 100%; /* Full width on smaller screens */
-    padding: 80px 20px; /* Adjust padding for smaller screens */
+    width: 100%;
+    padding: 80px 20px;
     margin: 0 auto;
   }
 
@@ -64,20 +63,19 @@
     text-align: left;
   }
 
-  /* Make the phone image visible only on small screens */
   .phone {
     display: block;
-    margin: 0 auto; /* Center the image on smaller screens */
-    padding: 0; /* Remove any padding */
-    text-align: center; /* Center the image inside the container */
+    margin: 0 auto;
+    padding: 0;
+    text-align: center;
   }
 
   .phone img {
-    width: auto; /* Ensure the image takes up the full container width */
-    height: 1000px; /* Maintain aspect ratio */
-    max-width: auto; /* Set a maximum width for the image */
-    padding: 0; /* Remove any padding from the image */
-    margin: 0; /* Remove any default margins */
+    width: auto;
+    height: 1000px;
+    max-width: auto;
+    padding: 0;
+    margin: 0;
   }
 
   .toke {
@@ -92,7 +90,7 @@
   }
 
   .text-content {
-    max-width: 100%; /* Limit the maximum width for the text content */
+    max-width: 100%;
     justify-content: space-between;
     align-items: left;
     width: 100%;
@@ -115,66 +113,64 @@
 @media (max-width: 440px) {
   .tokenomics {
     padding: 40px 15px;
-    max-width: 100%; /* Full width for phones */
+    max-width: 100%;
     margin: 0;
   }
 
   .tokenomics h2 {
-    font-size: 3rem; /* Reduce heading font size */
-    margin-bottom: 30px; /* Less margin below heading */
-    text-align: left; /* Center-align heading */
+    font-size: 3rem;
+    margin-bottom: 30px;
+    text-align: left;
     padding-left: 10px !important;
   }
 
   .distribution {
-    flex-direction: column; /* Stack image and text vertically */
-    text-align: center; /* Center-align text for phone screens */
-    gap: 20px; /* Keep some gap between image and text */
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
   }
 
   .text-content {
-    max-width: 100%; /* Allow text to take full width */
-    padding: 0 15px; /* Reduce padding */
-    text-align: justify; /* Keep text justified */
+    max-width: 100%;
+    padding: 0 15px;
+    text-align: justify;
   }
 
   .text-content h3 {
-    font-size: 1.5rem; /* Reduce font size */
-    margin-bottom: 15px; /* Less margin below subheading */
+    font-size: 1.5rem;
+    margin-bottom: 15px;
   }
 
   .text-content p {
-    font-size: 1rem; /* Smaller font size for paragraphs */
-    padding: 0; /* Remove padding for more space efficiency */
+    font-size: 1rem;
+    padding: 0;
   }
 
   .toke {
-    max-width: 100%; /* Ensure image takes full width on phones */
-    height: auto; /* Maintain image aspect ratio */
+    max-width: 100%;
+    height: auto;
   }
 
-  /* Phone image styles */
   .phone {
-    display: block; /* Show phone image */
-    margin: 0 auto; /* Center image */
-    padding: 0; /* Remove padding */
-    text-align: center; /* Center-align image */
+    display: block;
+    margin: 0 auto;
+    padding: 0;
+    text-align: center;
   }
 
   .phone img {
-    width: 100%; /* Ensure phone image takes full width */
-    height: auto; /* Maintain aspect ratio */
+    width: 100%;
+    height: auto;
   }
 
-  /* Hide large image on phones */
   .toke {
     display: none;
   }
 
   .about {
-    flex-direction: column; /* Stack content vertically */
-    align-items: center; /* Center-align items */
-    text-align: center; /* Center-align text */
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
     padding: 0 15px;
   }
 }

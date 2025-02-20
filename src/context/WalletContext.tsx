@@ -1,4 +1,3 @@
-// src/context/WalletContext.jsx
 import React, { createContext, useContext, useState } from "react";
 
 interface WalletContextType {

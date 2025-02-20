@@ -5,7 +5,7 @@
 }
 
 .App {
-  background-image: url("../src/images/back.jpg"); /* Path to your background image */
+  background-image: url("../src/images/back.jpg");
   background-size: cover;
   background-position: top;
   background-repeat: no-repeat;

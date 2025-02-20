@@ -1,17 +1,17 @@
 import React, { useState } from "react";
-import "./Hero.css"; // Create a CSS file for the hero section styles
+import "./Hero.css";
 import Illustration from "../images/Illustration.png";
-import CreateContractPage from "./CreateContractPage"; // Import the contract page
+import CreateContractPage from "./CreateContractPage";
 
 const Hero: React.FC = () => {
   const [showCreateContract, setShowCreateContract] = useState<boolean>(false);
 
   const handleCreateContract = (): void => {
-    setShowCreateContract(true); // Show the contract page as a modal
+    setShowCreateContract(true);
   };
 
   const handleCloseContract = (): void => {
-    setShowCreateContract(false); // Hide the contract page
+    setShowCreateContract(false);
   };
 
   return (
@@ -32,7 +32,6 @@ const Hero: React.FC = () => {
         </div>
       </section>
 
-      {/* Conditionally render CreateContractPage as a modal */}
       <div
         className={`create-contract-modal ${showCreateContract ? "show" : ""}`}
       >

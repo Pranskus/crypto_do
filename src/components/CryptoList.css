@@ -1,14 +1,14 @@
 .crypto-container {
-  padding: 80px 40px; /* Adjusted padding to match Hero section */
-  width: 80%; /* Same width as the hero */
-  max-width: 1400px; /* Same max-width as the hero */
-  margin: 0 auto; /* Center the container */
+  padding: 80px 40px;
+  width: 80%;
+  max-width: 1400px;
+  margin: 0 auto;
 }
 
 .crypto-heading {
   font-size: 4rem;
   color: #fff;
-  text-align: left; /* Align text to the left */
+  text-align: left;
 }
 
 .crypto-list {
@@ -50,7 +50,7 @@ ul {
 
 .crypto-details {
   display: flex;
-  gap: 40px; /* Larger gap between price and other data */
+  gap: 40px;
   align-items: center;
   justify-content: flex-end;
   flex: 2;
@@ -66,11 +66,11 @@ ul {
 }
 
 .crypto-change.positive {
-  color: #4caf50; /* Green for positive changes */
+  color: #4caf50;
 }
 
 .crypto-change.negative {
-  color: #f44336; /* Red for negative changes */
+  color: #f44336;
 }
 
 .crypto-sparkline {
@@ -78,7 +78,6 @@ ul {
   height: 30px;
 }
 
-/* Pagination Controls */
 .pagination-controls {
   display: flex;
   justify-content: center;
@@ -112,10 +111,10 @@ ul {
 
 @media (max-width: 1200px) {
   .crypto-container {
-    width: 100%; /* Full width on smaller screens */
-    padding: 80px 20px; /* Adjust padding for smaller screens */
+    width: 100%;
+    padding: 80px 20px;
     max-width: 1400px;
-    margin: 0 auto; /* Center the container */
+    margin: 0 auto;
   }
 
   .crypto-heading {
@@ -126,27 +125,27 @@ ul {
 @media (max-width: 440px) {
   .crypto-container {
     padding: 40px 15px;
-    max-width: 100%; /* Full width for phones */
-    margin: 0 auto; /* Center the container */
+    max-width: 100%;
+    margin: 0 auto;
   }
 
   .crypto-heading {
-    font-size: 3rem; /* Reduce the font size for headings */
-    text-align: left; /* Left-align the heading */
+    font-size: 3rem;
+    text-align: left;
     margin-bottom: 10px;
     padding: 15px !important;
   }
 
   .crypto-list {
     padding: 30px 15px;
-    border-radius: 50px; /* Smaller border radius */
+    border-radius: 50px;
     box-shadow: 0 6px 12px rgba(0, 148, 255, 0.4);
   }
 
   .crypto-item {
     display: grid;
-    grid-template-columns: 1fr 1fr; /* Create two columns */
-    gap: 10px; /* Space between columns */
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
     align-items: center;
     padding: 15px 0;
     border-bottom: 1px solid #1b324a;
@@ -159,57 +158,56 @@ ul {
   .crypto-name {
     display: flex;
     align-items: center;
-    gap: 10px; /* Smaller gap between name and icon */
+    gap: 10px;
   }
 
   .crypto-icon {
-    width: 40px; /* Smaller icon size */
+    width: 40px;
     height: auto;
   }
 
   .crypto-details {
     display: flex;
     flex-direction: column;
-    gap: 10px; /* Add gap between price and change */
+    gap: 10px;
     align-items: center;
     justify-content: flex-start;
   }
 
   .crypto-price {
-    font-size: 1.2rem; /* Adjust font size for price */
+    font-size: 1.2rem;
     color: #9fb3c8;
   }
 
   .crypto-change {
-    font-size: 0.9rem; /* Adjust font size for change */
+    font-size: 0.9rem;
   }
 
   .crypto-change.positive {
-    color: #4caf50; /* Green for positive changes */
+    color: #4caf50;
   }
 
   .crypto-change.negative {
-    color: #f44336; /* Red for negative changes */
+    color: #f44336;
   }
 
   .crypto-sparkline {
-    width: 120px; /* Smaller sparkline */
+    width: 120px;
     height: 25px;
     padding-bottom: 30px;
   }
 
-  /* Pagination Controls */
   .pagination-controls {
-    gap: 10px; /* Smaller gap between buttons */
+    gap: 10px;
     margin-top: 15px;
   }
 
   .pagination-controls button {
-    padding: 8px 15px; /* Adjust padding */
-    font-size: 0.9rem; /* Adjust font size for buttons */
-  }
+    padding: 8px 15px;
+    font-size: 0.9rem;
 
-  .pagination-controls span {
-    font-size: 1rem; /* Adjust font size for page indicator */
+    .pagination-controls span {
+      font-size: 1rem;
+    }
   }
 }

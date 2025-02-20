@@ -1,11 +1,9 @@
-// src/components/Header.jsx
 import React, { useState, useEffect } from "react";
-import { useWallet } from "../context/WalletContext"; // Import the custom hook
+import { useWallet } from "../context/WalletContext";
 import Logo from "../images/Logo.png";
 import "./Header.css";
 import { Link as ScrollLink } from "react-scroll";
 
-// Define the type for the wallet context
 interface WalletContextType {
   isConnected: boolean;
   toggleConnection: () => void;
@@ -14,7 +12,7 @@ interface WalletContextType {
 const Header: React.FC = () => {
   const { isConnected, toggleConnection } = useWallet() as WalletContextType;
   const [isScrolled, setIsScrolled] = useState<boolean>(false);
-  const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false); // State to handle mobile menu visibility
+  const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
 
   useEffect(() => {
     const handleScroll = (): void => {
@@ -31,7 +29,6 @@ const Header: React.FC = () => {
     };
   }, []);
 
-  // Toggle mobile menu visibility
   const handleMenuToggle = (): void => {
     setIsMenuOpen((prevState) => !prevState);
   };
@@ -45,14 +42,12 @@ const Header: React.FC = () => {
           </ScrollLink>
         </div>
 
-        {/* Hamburger Menu Icon */}
         <button className="hamburger-menu" onClick={handleMenuToggle}>
           <div className={`bar ${isMenuOpen ? "open" : ""}`}></div>
           <div className={`bar ${isMenuOpen ? "open" : ""}`}></div>
           <div className={`bar ${isMenuOpen ? "open" : ""}`}></div>
         </button>
 
-        {/* Navigation Menu */}
         <nav className={`nav-menu ${isMenuOpen ? "active" : ""}`}>
           <ul>
             <li>
@@ -77,7 +72,6 @@ const Header: React.FC = () => {
             </li>
           </ul>
 
-          {/* Wallet Button Inside Mobile Menu */}
           <button
             className={`wallet-button ${isConnected ? "connected" : ""}`}
             onClick={toggleConnection}
@@ -86,7 +80,6 @@ const Header: React.FC = () => {
           </button>
         </nav>
 
-        {/* Wallet Button for Desktop View */}
         <div className="wallet-container">
           <button
             className={`wallet-button ${isConnected ? "connected" : ""}`}

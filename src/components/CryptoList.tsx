@@ -7,18 +7,18 @@ import { CryptoData } from "../types/types";
 const CryptoList: React.FC = () => {
   const [cryptos, setCryptos] = useState<CryptoData[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
-  const [page, setPage] = useState<number>(1); // State to keep track of the current page
-  const perPage = 10; // Number of cryptocurrencies to display per page
+  const [page, setPage] = useState<number>(1);
+  const perPage = 10;
 
   useEffect(() => {
-    setLoading(true); // Set loading to true whenever page changes
+    setLoading(true);
     axios
       .get("https://api.coingecko.com/api/v3/coins/markets", {
         params: {
           vs_currency: "usd",
           order: "market_cap_desc",
           per_page: perPage,
-          page: page, // Use dynamic page value
+          page: page,
           sparkline: true,
           price_change_percentage: "1h,24h",
         },
@@ -31,14 +31,12 @@ const CryptoList: React.FC = () => {
         console.error("Error fetching the cryptocurrency data:", error);
         setLoading(false);
       });
-  }, [page]); // Re-run the effect when `page` changes
+  }, [page]);
 
-  // Function to handle the "Next" button click
   const handleNextPage = () => {
     setPage((prevPage) => prevPage + 1);
   };
 
-  // Function to handle the "Previous" button click
   const handlePrevPage = () => {
     if (page > 1) {
       setPage((prevPage) => prevPage - 1);
@@ -103,7 +101,7 @@ const CryptoList: React.FC = () => {
             </li>
           ))}
         </ul>
-        {/* Pagination Controls */}
+
         <div className="pagination-controls">
           <button onClick={handlePrevPage} disabled={page === 1}>
             Previous

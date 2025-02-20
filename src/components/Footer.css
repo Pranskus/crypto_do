@@ -11,7 +11,7 @@
   max-width: 1400px;
   margin: 0 auto;
   display: flex;
-  justify-content: center; /* Center all the content */
+  justify-content: center;
   align-items: center;
   flex-wrap: wrap;
   gap: 20px;
@@ -19,15 +19,15 @@
 
 .footer p {
   margin: 0;
-  text-align: center; /* Ensure the paragraph text is centered */
-  flex: 1; /* This will make it take up equal space along with other elements */
+  text-align: center;
+  flex: 1;
 }
 
 .footer-links {
   display: flex;
   gap: 20px;
   text-align: center;
-  justify-content: center; /* Center the links horizontally */
+  justify-content: center;
 }
 
 .footer-links a {
@@ -44,7 +44,7 @@
   .footer-content {
     flex-direction: column;
     text-align: center;
-    justify-content: center; /* Ensure the content is centered vertically */
+    justify-content: center;
   }
 
   .footer-links {
