@@ -7,6 +7,7 @@ import Tron from "../images/Tron.png";
 import Polygon from "../images/Polygon.png";
 import erc_token from "../images/erc_token.png";
 import erc_smart from "../images/erc_smart.png";
+import InfoDialog from "./InfoDialog";
 
 interface CreateContractPageProps {
   onClose?: () => void;
@@ -14,6 +15,8 @@ interface CreateContractPageProps {
 
 const CreateContractPage: React.FC<CreateContractPageProps> = ({ onClose }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [showInfoDialog, setShowInfoDialog] = useState(false);
+  const [infoMessage, setInfoMessage] = useState("");
 
   const handleOpenModal = (event: React.MouseEvent<HTMLDivElement>) => {
     console.log("Opening modal...");
@@ -32,6 +35,21 @@ const CreateContractPage: React.FC<CreateContractPageProps> = ({ onClose }) => {
     if (event.target === event.currentTarget) {
       onClose?.();
     }
+  };
+
+  const handleCardClick = (type: "token" | "smart") => {
+    setShowInfoDialog(true);
+    setInfoMessage(
+      type === "token"
+        ? "Token creation process not available, please connect wallet"
+        : "Smart contract creation process not available, please connect wallet"
+    );
+    setIsModalOpen(false);
+  };
+
+  const handleInfoDialogClose = () => {
+    setShowInfoDialog(false);
+    onClose?.();
   };
 
   useEffect(() => {
@@ -149,13 +167,13 @@ const CreateContractPage: React.FC<CreateContractPageProps> = ({ onClose }) => {
         <h2 className="modal-title">CHOOSE WHAT TO CREATE</h2>
 
         <div className="modal-cards">
-          <div className="modal-card">
+          <div className="modal-card" onClick={() => handleCardClick("token")}>
             <div className="modal-card-icon">
               <img src={erc_token} alt="token" />
             </div>
           </div>
 
-          <div className="modal-card">
+          <div className="modal-card" onClick={() => handleCardClick("smart")}>
             <div className="modal-card-icon">
               <img src={erc_smart} alt="smart" />
             </div>
@@ -170,6 +188,13 @@ const CreateContractPage: React.FC<CreateContractPageProps> = ({ onClose }) => {
           important role in shaping the training system.
         </p>
       </Modal>
+
+      <InfoDialog
+        isOpen={showInfoDialog}
+        message={infoMessage}
+        onClose={handleInfoDialogClose}
+        duration={3000}
+      />
     </div>
   );
 };

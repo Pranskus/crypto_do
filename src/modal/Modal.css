@@ -99,35 +99,36 @@
   }
 }
 
-/* Modal title */
 .modal-title {
   font-size: 3rem;
   margin-bottom: 70px;
   margin-top: 50px;
 }
 
-/* Modal cards container */
 .modal-cards {
   display: flex;
   justify-content: space-around;
   margin-bottom: 50px;
 }
 
-/* Individual modal card */
 .modal-card {
   border-radius: 10px;
   padding: 10px;
   width: 90%;
   text-align: center;
+  cursor: pointer;
+  transition: transform 0.2s ease;
 }
 
-/* Modal card icon */
+.modal-card:hover {
+  transform: scale(1.02);
+}
+
 .modal-card-icon img {
   max-width: 100%;
   margin-bottom: 20px;
 }
 
-/* Modal card text */
 .modal-card-text h3 {
   font-size: 1.5rem;
 }
@@ -141,13 +142,11 @@
   font-size: 0.9rem;
 }
 
-/* Modal subtitle */
 .modal-subtitle {
   font-size: 2rem;
   margin-top: 20px;
 }
 
-/* Modal description */
 .modal-description {
   font-size: 1rem;
   text-align: center;
@@ -160,12 +159,10 @@
 }
 
 @media (max-width: 440px) {
-  /* Modal overlay */
   .modal-overlay {
     padding: 10px;
   }
 
-  /* Modal content */
   .modal-content {
     padding: 20px;
     border-radius: 5px;
@@ -199,7 +196,6 @@
     margin-bottom: 15px;
   }
 
-  /* Modal card text */
   .modal-card-text h3 {
     font-size: 1.2rem;
   }
@@ -212,13 +208,11 @@
     font-size: 0.8rem;
   }
 
-  /* Modal subtitle */
   .modal-subtitle {
     font-size: 1.5rem;
     margin-top: 10px;
   }
 
-  /* Modal description */
   .modal-description {
     font-size: 0.9rem;
     margin-top: 20px;
@@ -226,7 +220,6 @@
     text-align: justify;
   }
 
-  /* Blue text class */
   .blue-text {
     font-size: 1rem;
   }
